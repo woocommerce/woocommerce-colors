@@ -63,7 +63,7 @@ module.exports = function( grunt ) {
 				options: {
 					type: 'wp-plugin',
 					potHeaders: {
-						'report-msgid-bugs-to': 'http://wordpress.org/support/plugin/woocommerce-customizer/',
+						'report-msgid-bugs-to': 'http://wordpress.org/support/plugin/woocommerce-frontend-styles/',
 						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
 					}
 				}

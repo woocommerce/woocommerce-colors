@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: WooCommerce Customizer
- * Plugin URI: http://wordpress.org/plugins/woocommerce-customizer/
- * Description: WooCommerce Customizer.
+ * Plugin Name: WooCommerce Frontend Styles
+ * Plugin URI: http://wordpress.org/plugins/woocommerce-frontend-styles/
+ * Description: WooCommerce Frontend Styles.
  * Author: WooThemes
  * Author URI: http://woothemes.com
  * Version: 1.0.0
  * License: GPLv2 or later
- * Text Domain: woocommerce-customizer
+ * Text Domain: woocommerce-frontend-styles
  * Domain Path: languages/
  */
 
@@ -15,12 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WC_Customizer' ) ) :
+if ( ! class_exists( 'WC_Frontend_Styles' ) ) :
 
 /**
- * WooCommerce Customizer main class.
+ * WooCommerce Frontend Styles main class.
  */
-class WC_Customizer {
+class WC_Frontend_Styles {
 
 	/**
 	 * Plugin version.
@@ -45,6 +45,7 @@ class WC_Customizer {
 
 		// Checks with WooCommerce is installed.
 		if ( class_exists( 'WooCommerce' ) && defined( 'WOOCOMMERCE_VERSION' ) && version_compare( WOOCOMMERCE_VERSION, '2.3', '>=' ) ) {
+			error_log( print_r( 'oi', true ) );
 			$this->includes();
 		} else {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
@@ -71,10 +72,10 @@ class WC_Customizer {
 	 * @return void
 	 */
 	public function load_plugin_textdomain() {
-		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-customizer' );
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-frontend-styles' );
 
-		load_textdomain( 'woocommerce-customizer', trailingslashit( WP_LANG_DIR ) . 'woocommerce-customizer/woocommerce-customizer-' . $locale . '.mo' );
-		load_plugin_textdomain( 'woocommerce-customizer', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_textdomain( 'woocommerce-frontend-styles', trailingslashit( WP_LANG_DIR ) . 'woocommerce-frontend-styles/woocommerce-frontend-styles-' . $locale . '.mo' );
+		load_plugin_textdomain( 'woocommerce-frontend-styles', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**
@@ -92,10 +93,10 @@ class WC_Customizer {
 	 * @return string
 	 */
 	public function woocommerce_missing_notice() {
-		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Customizer depends on the last version of %s to work!', 'woocommerce-customizer' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce', 'woocommerce-customizer' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Frontend Styles depends on the last version of %s to work!', 'woocommerce-frontend-styles' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce', 'woocommerce-frontend-styles' ) . '</a>' ) . '</p></div>';
 	}
 }
 
-add_action( 'plugins_loaded', array( 'WC_Customizer', 'get_instance' ), 0 );
+add_action( 'plugins_loaded', array( 'WC_Frontend_Styles', 'get_instance' ), 0 );
 
 endif;
