@@ -45,7 +45,6 @@ class WC_Frontend_Styles {
 
 		// Checks with WooCommerce is installed.
 		if ( class_exists( 'WooCommerce' ) && defined( 'WOOCOMMERCE_VERSION' ) && version_compare( WOOCOMMERCE_VERSION, '2.3', '>=' ) ) {
-			error_log( print_r( 'oi', true ) );
 			$this->includes();
 		} else {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
@@ -67,9 +66,16 @@ class WC_Frontend_Styles {
 	}
 
 	/**
-	 * Load the plugin text domain for translation.
+	 * Get assets url.
 	 *
-	 * @return void
+	 * @return string
+	 */
+	public static function get_assets_url() {
+		return plugins_url( 'assets/', __FILE__ );
+	}
+
+	/**
+	 * Load the plugin text domain for translation.
 	 */
 	public function load_plugin_textdomain() {
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-frontend-styles' );
@@ -80,11 +86,9 @@ class WC_Frontend_Styles {
 
 	/**
 	 * Includes.
-	 *
-	 * @return void
 	 */
 	private function includes() {
-
+		include_once 'includes/class-wc-frontend-style-customize.php';
 	}
 
 	/**
