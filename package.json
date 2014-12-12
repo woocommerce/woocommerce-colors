@@ -1,10 +1,10 @@
 {
-  "name": "woocommerce-frontend-styles",
-  "description": "WooCommerce Customizer",
+  "name": "woocommerce-colors",
+  "description": "WooCommerce Colors",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woothemes/woocommerce-frontend-styles.git"
+    "url": "https://github.com/woothemes/woocommerce-colors.git"
   },
   "main": "Gruntfile.js",
   "devDependencies": {

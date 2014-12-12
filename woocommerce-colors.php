@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: WooCommerce Frontend Styles
- * Plugin URI: http://wordpress.org/plugins/woocommerce-frontend-styles/
- * Description: WooCommerce Frontend Styles.
+ * Plugin Name: WooCommerce Colors
+ * Plugin URI: http://wordpress.org/plugins/woocommerce-colors/
+ * Description: WooCommerce Colors.
  * Author: WooThemes
  * Author URI: http://woothemes.com
  * Version: 1.0.0
@@ -15,12 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WC_Frontend_Styles' ) ) :
+if ( ! class_exists( 'WC_Colors' ) ) :
 
 /**
- * WooCommerce Frontend Styles main class.
+ * WooCommerce Colors main class.
  */
-class WC_Frontend_Styles {
+class WC_Colors {
 
 	/**
 	 * Plugin version.
@@ -44,7 +44,7 @@ class WC_Frontend_Styles {
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
 		// Checks with WooCommerce is installed.
-		if ( class_exists( 'WooCommerce' ) && defined( 'WOOCOMMERCE_VERSION' ) && version_compare( WOOCOMMERCE_VERSION, '2.3', '>=' ) ) {
+		if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 			$this->includes();
 		} else {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
@@ -88,7 +88,7 @@ class WC_Frontend_Styles {
 	 * Includes.
 	 */
 	private function includes() {
-		include_once 'includes/class-wc-frontend-style-customize.php';
+		include_once 'includes/class-wc-colors-customizer.php';
 	}
 
 	/**
@@ -97,10 +97,10 @@ class WC_Frontend_Styles {
 	 * @return string
 	 */
 	public function woocommerce_missing_notice() {
-		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Frontend Styles depends on the last version of %s to work!', 'woocommerce-frontend-styles' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce', 'woocommerce-frontend-styles' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Colors depends on the last version of %s or later to work!', 'woocommerce-frontend-styles' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce 2.3', 'woocommerce-frontend-styles' ) . '</a>' ) . '</p></div>';
 	}
 }
 
-add_action( 'plugins_loaded', array( 'WC_Frontend_Styles', 'get_instance' ), 0 );
+add_action( 'plugins_loaded', array( 'WC_Colors', 'get_instance' ), 0 );
 
 endif;

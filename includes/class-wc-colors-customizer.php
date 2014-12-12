@@ -4,20 +4,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce Frontend Styles Customize.
+ * WooCommerce Colors Customizer.
  *
- * @package  WC_Frontend_Styles/Customize
+ * @package  WC_Colors/Customizer
  * @category Class
  * @author   WooThemes
  */
-class WC_Frontend_Styles_Customize {
+class WC_Colors_Customizer {
 
 	/**
 	 * Section slug.
 	 *
 	 * @var string
 	 */
-	public $section_slug = 'woocommerce_styles';
+	public $section_slug = 'woocommerce_colors';
 
 	/**
 	 * Initialize the customize actions.
@@ -37,7 +37,7 @@ class WC_Frontend_Styles_Customize {
 		$wp_customize->add_section( $this->section_slug, array(
 			'title'       => __( 'WooCommerce', 'woocommerce-frontend-styles' ),
 			'priority'    => 60,
-			'description' => __( 'WooCommerce Frontend Styles.', 'woocommerce-frontend-styles' )
+			'description' => __( 'WooCommerce Colors.', 'woocommerce-frontend-styles' )
 		) );
 
 		// Primary Color.
@@ -122,8 +122,8 @@ class WC_Frontend_Styles_Customize {
 	public function live_preview() {
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'woocommerce-frontend-styles-customizer', WC_Frontend_Styles::get_assets_url() . 'js/customizer' . $suffix . '.js', array( 'jquery', 'customize-preview' ), WC_Frontend_Styles::VERSION, true );
+		wp_enqueue_script( 'woocommerce-frontend-styles-customizer', WC_Colors::get_assets_url() . 'js/customizer' . $suffix . '.js', array( 'jquery', 'customize-preview' ), WC_Colors::VERSION, true );
 	}
 }
 
-new WC_Frontend_Styles_Customize();
+new WC_Colors_Customizer();
