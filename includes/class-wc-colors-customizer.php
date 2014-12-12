@@ -35,9 +35,9 @@ class WC_Colors_Customizer {
 	public function register_settings( $wp_customize ) {
 
 		$wp_customize->add_section( $this->section_slug, array(
-			'title'       => __( 'WooCommerce', 'woocommerce-frontend-styles' ),
+			'title'       => __( 'WooCommerce', 'woocommerce-colors' ),
 			'priority'    => 60,
-			'description' => __( 'WooCommerce Colors.', 'woocommerce-frontend-styles' )
+			'description' => __( 'WooCommerce Colors.', 'woocommerce-colors' )
 		) );
 
 		// Primary Color.
@@ -49,7 +49,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_primary', array(
-			'label'    => __( 'Primary Color', 'woocommerce-frontend-styles' ),
+			'label'    => __( 'Primary Color', 'woocommerce-colors' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[primary]',
 			'priority' => 1
@@ -64,7 +64,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_secondary', array(
-			'label'    => __( 'Secondary Color', 'woocommerce-frontend-styles' ),
+			'label'    => __( 'Secondary Color', 'woocommerce-colors' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[secondary]',
 			'priority' => 1
@@ -79,7 +79,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_highlight', array(
-			'label'    => __( 'Highlight Color', 'woocommerce-frontend-styles' ),
+			'label'    => __( 'Highlight Color', 'woocommerce-colors' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[highlight]',
 			'priority' => 1
@@ -94,7 +94,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_content_bg', array(
-			'label'    => __( 'Content Background Color', 'woocommerce-frontend-styles' ),
+			'label'    => __( 'Content Background Color', 'woocommerce-colors' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[content_bg]',
 			'priority' => 1
@@ -109,7 +109,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_subtext', array(
-			'label'    => __( 'Subtext Color', 'woocommerce-frontend-styles' ),
+			'label'    => __( 'Subtext Color', 'woocommerce-colors' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[subtext]',
 			'priority' => 1
@@ -122,7 +122,8 @@ class WC_Colors_Customizer {
 	public function live_preview() {
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'woocommerce-frontend-styles-customizer', WC_Colors::get_assets_url() . 'js/customizer' . $suffix . '.js', array( 'jquery', 'customize-preview' ), WC_Colors::VERSION, true );
+		wp_enqueue_script( 'tinycolor', WC_Colors::get_assets_url() . 'js/tinycolor' . $suffix . '.js', array(), '1.1.1', true );
+		wp_enqueue_script( 'woocommerce-colors-customizer', WC_Colors::get_assets_url() . 'js/customizer' . $suffix . '.js', array( 'jquery', 'customize-preview', 'tinycolor' ), WC_Colors::VERSION, true );
 	}
 }
 

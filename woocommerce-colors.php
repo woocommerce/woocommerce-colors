@@ -7,7 +7,7 @@
  * Author URI: http://woothemes.com
  * Version: 1.0.0
  * License: GPLv2 or later
- * Text Domain: woocommerce-frontend-styles
+ * Text Domain: woocommerce-colors
  * Domain Path: languages/
  */
 
@@ -78,10 +78,10 @@ class WC_Colors {
 	 * Load the plugin text domain for translation.
 	 */
 	public function load_plugin_textdomain() {
-		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-frontend-styles' );
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-colors' );
 
-		load_textdomain( 'woocommerce-frontend-styles', trailingslashit( WP_LANG_DIR ) . 'woocommerce-frontend-styles/woocommerce-frontend-styles-' . $locale . '.mo' );
-		load_plugin_textdomain( 'woocommerce-frontend-styles', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_textdomain( 'woocommerce-colors', trailingslashit( WP_LANG_DIR ) . 'woocommerce-colors/woocommerce-colors-' . $locale . '.mo' );
+		load_plugin_textdomain( 'woocommerce-colors', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class WC_Colors {
 	 * @return string
 	 */
 	public function woocommerce_missing_notice() {
-		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Colors depends on the last version of %s or later to work!', 'woocommerce-frontend-styles' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce 2.3', 'woocommerce-frontend-styles' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Colors depends on the last version of %s or later to work!', 'woocommerce-colors' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce 2.3', 'woocommerce-colors' ) . '</a>' ) . '</p></div>';
 	}
 }
 
