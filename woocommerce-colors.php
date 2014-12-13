@@ -103,13 +103,13 @@ class WC_Colors {
 
 			// Defaults.
 			if ( empty( $colors['primary'] ) ) {
-				$colors['primary'] = '#ad74a2';
+				$colors['primary'] = '#a46497';
 			}
 			if ( empty( $colors['secondary'] ) ) {
-				$colors['secondary'] = '#f7f6f7';
+				$colors['secondary'] = '#ebe9eb';
 			}
 			if ( empty( $colors['highlight'] ) ) {
-				$colors['highlight'] = '#85ad74';
+				$colors['highlight'] = '#77a464';
 			}
 			if ( empty( $colors['content_bg'] ) ) {
 				$colors['content_bg'] = '#ffffff';

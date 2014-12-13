@@ -44,7 +44,7 @@ class WC_Colors_Customizer {
 
 		// Primary Color.
 		$wp_customize->add_setting( $this->section_slug . '[primary]', array(
-			'default'           => '#ad74a2',
+			'default'           => '#a46497',
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -59,7 +59,7 @@ class WC_Colors_Customizer {
 
 		// Secondary Color.
 		$wp_customize->add_setting( $this->section_slug . '[secondary]', array(
-			'default'           => '#f7f6f7',
+			'default'           => '#ebe9eb',
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -74,7 +74,7 @@ class WC_Colors_Customizer {
 
 		// Highlight Color.
 		$wp_customize->add_setting( $this->section_slug . '[highlight]', array(
-			'default'           => '#85ad74',
+			'default'           => '#77a464',
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -139,13 +139,13 @@ class WC_Colors_Customizer {
 
 		// Defaults.
 		if ( empty( $colors['primary'] ) ) {
-			$colors['primary'] = '#ad74a2';
+			$colors['primary'] = '#a46497';
 		}
 		if ( empty( $colors['secondary'] ) ) {
-			$colors['secondary'] = '#f7f6f7';
+			$colors['secondary'] = '#ebe9eb';
 		}
 		if ( empty( $colors['highlight'] ) ) {
-			$colors['highlight'] = '#85ad74';
+			$colors['highlight'] = '#77a464';
 		}
 		if ( empty( $colors['content_bg'] ) ) {
 			$colors['content_bg'] = '#ffffff';
