@@ -92,6 +92,53 @@ class WC_Colors {
 	}
 
 	/**
+	 * Install method.
+	 */
+	public static function install() {
+		// Get old frontend colors from WooCommerce core.
+		$colors = get_option( 'woocommerce_frontend_css_colors' );
+
+		if ( $colors ) {
+			$colors = array_map( 'esc_attr', (array) $colors );
+
+			// Defaults.
+			if ( empty( $colors['primary'] ) ) {
+				$colors['primary'] = '#ad74a2';
+			}
+			if ( empty( $colors['secondary'] ) ) {
+				$colors['secondary'] = '#f7f6f7';
+			}
+			if ( empty( $colors['highlight'] ) ) {
+				$colors['highlight'] = '#85ad74';
+			}
+			if ( empty( $colors['content_bg'] ) ) {
+				$colors['content_bg'] = '#ffffff';
+			}
+			if ( empty( $colors['subtext'] ) ) {
+				$colors['subtext'] = '#777777';
+			}
+
+			update_option( 'woocommerce_colors', $colors );
+
+			// Compile the css.
+			include_once 'includes/libs/class-scss.php';
+
+			ob_start();
+			include 'includes/views/scss.php';
+			$scss = ob_get_clean();
+
+			$compiler     = new scssc;
+			$compiler->setFormatter( 'scss_formatter_compressed' );
+			$compiled_css = $compiler->compile( trim( $scss ) );
+
+			update_option( 'woocommerce_colors_css', $compiled_css );
+
+			// Delete the old option.
+			delete_option( 'woocommerce_frontend_css_colors' );
+		}
+	}
+
+	/**
 	 * WooCommerce fallback notice.
 	 *
 	 * @return string
@@ -100,6 +147,9 @@ class WC_Colors {
 		echo '<div class="error"><p>' . sprintf( __( 'WooCommerce Colors depends on the last version of %s or later to work!', 'woocommerce-colors' ), '<a href="http://www.woothemes.com/woocommerce/" target="_blank">' . __( 'WooCommerce 2.3', 'woocommerce-colors' ) . '</a>' ) . '</p></div>';
 	}
 }
+
+// Plugin install.
+register_activation_hook( __FILE__, array( 'WC_Colors', 'install' ) );
 
 add_action( 'plugins_loaded', array( 'WC_Colors', 'get_instance' ), 0 );
 

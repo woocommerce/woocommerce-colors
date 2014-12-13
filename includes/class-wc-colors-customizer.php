@@ -135,7 +135,7 @@ class WC_Colors_Customizer {
 	 */
 	protected function get_options() {
 		// Get settings.
-		$colors = get_option( 'woocommerce_colors', array() );
+		$colors = array_map( 'esc_attr', (array) get_option( 'woocommerce_colors' ) );
 
 		// Defaults.
 		if ( empty( $colors['primary'] ) ) {
