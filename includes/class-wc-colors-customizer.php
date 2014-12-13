@@ -26,6 +26,7 @@ class WC_Colors_Customizer {
 		add_action( 'customize_register', array( $this, 'register_settings' ) );
 		add_action( 'customize_preview_init', array( $this, 'live_preview' ) );
 		add_action( 'customize_save_after', array( $this, 'save_after' ) );
+		add_action( 'wp_head', array( $this, 'header_output' ), 99999 );
 	}
 
 	/**
@@ -128,6 +129,57 @@ class WC_Colors_Customizer {
 	}
 
 	/**
+	 * Get the plugin options.
+	 *
+	 * @return array
+	 */
+	protected function get_options() {
+		// Get settings.
+		$colors = get_option( 'woocommerce_colors', array() );
+
+		// Defaults.
+		if ( empty( $colors['primary'] ) ) {
+			$colors['primary'] = '#ad74a2';
+		}
+		if ( empty( $colors['secondary'] ) ) {
+			$colors['secondary'] = '#f7f6f7';
+		}
+		if ( empty( $colors['highlight'] ) ) {
+			$colors['highlight'] = '#85ad74';
+		}
+		if ( empty( $colors['content_bg'] ) ) {
+			$colors['content_bg'] = '#ffffff';
+		}
+		if ( empty( $colors['subtext'] ) ) {
+			$colors['subtext'] = '#777777';
+		}
+
+		return $colors;
+	}
+
+	/**
+	 * Compile the SCSS.
+	 *
+	 * @return string
+	 */
+	protected function compile_scss() {
+		include_once 'libs/class-scss.php';
+
+		// Get options
+		$colors = $this->get_options();
+
+		ob_start();
+		include 'views/scss.php';
+		$scss = ob_get_clean();
+
+		$compiler     = new scssc;
+		$compiler->setFormatter( 'scss_formatter_compressed' );
+		$compiled_css = $compiler->compile( trim( $scss ) );
+
+		return $compiled_css;
+	}
+
+	/**
 	 * Save the colors.
 	 *
 	 * @param WP_Customize_Manager $customize
@@ -148,8 +200,23 @@ class WC_Colors_Customizer {
 		}
 
 		if ( $save ) {
+			$css = $this->compile_scss();
 
+			update_option( 'woocommerce_colors_css', $css );
 		}
+	}
+
+	/**
+	 * Header output.
+	 */
+	public function header_output() {
+		$css = get_option( 'woocommerce_colors_css' );
+
+		echo "<!-- WooCommerce Colors -->\n";
+		echo "<style type=\"text/css\">\n";
+		echo $css;
+		echo "\n</style>\n";
+		echo "<!--/WooCommerce Colors-->\n";
 	}
 }
 
