@@ -25,6 +25,7 @@ class WC_Colors_Customizer {
 	public function __construct() {
 		add_action( 'customize_register', array( $this, 'register_settings' ) );
 		add_action( 'customize_preview_init', array( $this, 'live_preview' ) );
+		add_action( 'customize_save_after', array( $this, 'save_after' ) );
 	}
 
 	/**
@@ -86,17 +87,17 @@ class WC_Colors_Customizer {
 		) ) );
 
 		// Content Background Color.
-		$wp_customize->add_setting( $this->section_slug . '[content_bg]', array(
+		$wp_customize->add_setting( $this->section_slug . '[contentbg]', array(
 			'default'           => '#ffffff',
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_content_bg', array(
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_contentbg', array(
 			'label'    => __( 'Content Background Color', 'woocommerce-colors' ),
 			'section'  => $this->section_slug,
-			'settings' => $this->section_slug . '[content_bg]',
+			'settings' => $this->section_slug . '[contentbg]',
 			'priority' => 1
 		) ) );
 
@@ -124,6 +125,31 @@ class WC_Colors_Customizer {
 
 		wp_enqueue_script( 'tinycolor', WC_Colors::get_assets_url() . 'js/tinycolor' . $suffix . '.js', array(), '1.1.1', true );
 		wp_enqueue_script( 'woocommerce-colors-customizer', WC_Colors::get_assets_url() . 'js/customizer' . $suffix . '.js', array( 'jquery', 'customize-preview', 'tinycolor' ), WC_Colors::VERSION, true );
+	}
+
+	/**
+	 * Save the colors.
+	 *
+	 * @param WP_Customize_Manager $customize
+	 */
+	public function save_after( $customize ) {
+		if ( ! isset( $_REQUEST['customized'] ) ) {
+			return;
+		}
+
+		$customized = json_decode( stripslashes( $_REQUEST['customized'] ), true );
+		$save       = false;
+
+		foreach ( $customized as $key => $value ) {
+			if ( false !== strpos( $key, $this->section_slug ) ) {
+				$save = true;
+				break;
+			}
+		}
+
+		if ( $save ) {
+
+		}
 	}
 }
 
