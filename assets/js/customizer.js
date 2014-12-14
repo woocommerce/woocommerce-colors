@@ -1,11 +1,18 @@
 /*global tinycolor */
 ( function( $ ) {
 
+	function isDark( color ) {
+		var rgb = tinycolor( color ).toRgb(),
+			brightness = ( ( rgb.r * 299 ) + ( rgb.g * 587 ) + ( rgb.b * 114 ) ) / 1000;
+
+		return brightness > 155;
+	}
+
 	function changeColor( color, adjustment, saturation ) {
-		if ( tinycolor( color ).isLight() ) {
-			return tinycolor( color ).darken( adjustment ).desaturate( saturation ).toString();
-		} else {
+		if ( isDark( color ) ) {
 			return tinycolor( color ).lighten( adjustment ).desaturate( saturation ).toString();
+		} else {
+			return tinycolor( color ).darken( adjustment ).desaturate( saturation ).toString();
 		}
 	}
 
