@@ -92,6 +92,36 @@ class WC_Colors {
 	}
 
 	/**
+	 * Get the plugin options.
+	 *
+	 * @param  array $colors
+	 *
+	 * @return array
+	 */
+	public static function get_options( $colors ) {
+		$colors = array_map( 'esc_attr', (array) $colors );
+
+		// Defaults.
+		if ( empty( $colors['primary'] ) ) {
+			$colors['primary'] = '#a46497';
+		}
+		if ( empty( $colors['secondary'] ) ) {
+			$colors['secondary'] = '#ebe9eb';
+		}
+		if ( empty( $colors['highlight'] ) ) {
+			$colors['highlight'] = '#77a464';
+		}
+		if ( empty( $colors['content_bg'] ) ) {
+			$colors['content_bg'] = '#ffffff';
+		}
+		if ( empty( $colors['subtext'] ) ) {
+			$colors['subtext'] = '#777777';
+		}
+
+		return $colors;
+	}
+
+	/**
 	 * Install method.
 	 */
 	public static function install() {
@@ -99,24 +129,7 @@ class WC_Colors {
 		$colors = get_option( 'woocommerce_frontend_css_colors' );
 
 		if ( $colors ) {
-			$colors = array_map( 'esc_attr', (array) $colors );
-
-			// Defaults.
-			if ( empty( $colors['primary'] ) ) {
-				$colors['primary'] = '#a46497';
-			}
-			if ( empty( $colors['secondary'] ) ) {
-				$colors['secondary'] = '#ebe9eb';
-			}
-			if ( empty( $colors['highlight'] ) ) {
-				$colors['highlight'] = '#77a464';
-			}
-			if ( empty( $colors['content_bg'] ) ) {
-				$colors['content_bg'] = '#ffffff';
-			}
-			if ( empty( $colors['subtext'] ) ) {
-				$colors['subtext'] = '#777777';
-			}
+			$colors = self::get_options( $colors );
 
 			update_option( 'woocommerce_colors', $colors );
 

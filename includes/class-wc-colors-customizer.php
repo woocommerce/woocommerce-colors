@@ -129,35 +129,6 @@ class WC_Colors_Customizer {
 	}
 
 	/**
-	 * Get the plugin options.
-	 *
-	 * @return array
-	 */
-	protected function get_options() {
-		// Get settings.
-		$colors = array_map( 'esc_attr', (array) get_option( 'woocommerce_colors' ) );
-
-		// Defaults.
-		if ( empty( $colors['primary'] ) ) {
-			$colors['primary'] = '#a46497';
-		}
-		if ( empty( $colors['secondary'] ) ) {
-			$colors['secondary'] = '#ebe9eb';
-		}
-		if ( empty( $colors['highlight'] ) ) {
-			$colors['highlight'] = '#77a464';
-		}
-		if ( empty( $colors['content_bg'] ) ) {
-			$colors['content_bg'] = '#ffffff';
-		}
-		if ( empty( $colors['subtext'] ) ) {
-			$colors['subtext'] = '#777777';
-		}
-
-		return $colors;
-	}
-
-	/**
 	 * Compile the SCSS.
 	 *
 	 * @return string
@@ -166,7 +137,7 @@ class WC_Colors_Customizer {
 		include_once 'libs/class-scss.php';
 
 		// Get options
-		$colors = $this->get_options();
+		$colors = WC_Colors::get_options( get_option( 'woocommerce_colors' ) );
 
 		ob_start();
 		include 'views/scss.php';
