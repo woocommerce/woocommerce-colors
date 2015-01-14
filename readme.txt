@@ -3,7 +3,7 @@ Contributors: woothemes, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 3.9
 Tested up to: 4.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,10 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 1. WooCommerce Colors on Customizer menu.
 
 == Changelog ==
+
+= 1.0.1 - 2015/01/14 =
+
+* Fixed the styles for tabs and checkout buddle.
 
 = 1.0.0 =
 

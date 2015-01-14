@@ -5,7 +5,7 @@
  * Description: WooCommerce Colors.
  * Author: WooThemes
  * Author URI: http://woothemes.com
- * Version: 1.0.0
+ * Version: 1.0.1
  * License: GPLv2 or later
  * Text Domain: woocommerce-colors
  * Domain Path: languages/
@@ -27,7 +27,7 @@ class WC_Colors {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/**
 	 * Instance of this class.
