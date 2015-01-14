@@ -80,13 +80,28 @@ p.demo_store {
 					&:before,
 					&:after {
 						border: 1px solid darken( $secondary, 10% );
+						position: absolute;
+						bottom: -1px;
+						width: 5px;
+						height: 5px;
+						content: " ";
 					}
 
 					&:before {
+						left: -6px;
+						-webkit-border-bottom-right-radius: 4px;
+						-moz-border-bottom-right-radius: 4px;
+						border-bottom-right-radius: 4px;
+						border-width: 0 1px 1px 0;
 						box-shadow: 2px 2px 0 $secondary;
 					}
 
 					&:after {
+						right: -6px;
+						-webkit-border-bottom-left-radius: 4px;
+						-moz-border-bottom-left-radius: 4px;
+						border-bottom-left-radius: 4px;
+						border-width: 0 0 1px 1px;
 						box-shadow: -2px 2px 0 $secondary;
 					}
 				}
@@ -323,7 +338,16 @@ p.demo_store {
 			}
 
 			&:after {
+				content: "";
+				display: block;
 				border: 8px solid darken( $secondary, 5% );
+				border-right-color: transparent;
+				border-left-color: transparent;
+				border-top-color: transparent;
+				position: absolute;
+				top: -3px;
+				left: 0;
+				margin: -1em 0 0 2em;
 			}
 		}
 	}

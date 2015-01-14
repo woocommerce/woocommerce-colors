@@ -66,9 +66,9 @@
 			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li { border: 1px solid ' + tinycolor( secondary ).darken( 10 ).toString() + '; background-color: ' + secondary + '; }';
 			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li a { color: ' + secondaryText + '; }';
 			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover { color: ' + tinycolor( secondaryText ).lighten( 10 ).toString() + '; }';
-			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li:before, .woocommerce div.product .woocommerce-tabs ul.tabs li:after { border: 1px solid ' + tinycolor( secondary ).darken( 10 ).toString() + '; }';
-			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li:before { box-shadow: 2px 2px 0 ' + secondary + '; }';
-			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li:after { box-shadow: -2px 2px 0 ' + secondary + '; }';
+			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li:before, .woocommerce div.product .woocommerce-tabs ul.tabs li:after { border: 1px solid ' + tinycolor( secondary ).darken( 10 ).toString() + '; position: absolute; bottom: -1px; width: 5px; height: 5px; content: " "; }';
+			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li:before { box-shadow: 2px 2px 0 ' + secondary + '; left: -6px; -webkit-border-bottom-right-radius: 4px; -moz-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; border-width: 0 1px 1px 0; }';
+			css += '.woocommerce div.product .woocommerce-tabs ul.tabs li:after { box-shadow: -2px 2px 0 ' + secondary + '; right: -6px; -webkit-border-bottom-left-radius: 4px; -moz-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; border-width: 0 0 1px 1px; }';
 			css += '.woocommerce div.product .woocommerce-tabs ul.tabs:before { border-bottom: 1px solid ' + tinycolor( secondary ).darken( 10 ).toString() + '; }';
 
 			// Pagination.
@@ -110,7 +110,7 @@
 			css += '.woocommerce-checkout #payment div.payment_box ::-webkit-input-placeholder { color: ' + tinycolor( secondary ).darken( 20 ).toString() + '; }';
 			css += '.woocommerce-checkout #payment div.payment_box :-moz-placeholder { color: ' + tinycolor( secondary ).darken( 20 ).toString() + '; }';
 			css += '.woocommerce-checkout #payment div.payment_box :-ms-input-placeholder { color: ' + tinycolor( secondary ).darken( 20 ).toString() + '; }';
-			css += '.woocommerce-checkout #payment div.payment_box:after { border: 8px solid ' + tinycolor( secondary ).darken( 5 ).toString() + '; }';
+			css += '.woocommerce-checkout #payment div.payment_box:after { border: 8px solid ' + tinycolor( secondary ).darken( 5 ).toString() + '; content: ""; display: block; border-right-color: transparent; border-left-color: transparent; border-top-color: transparent; position: absolute; top: -3px; left: 0; margin: -1em 0 0 2em; }';
 
 			$( '#woocommerce-colors-secondary' ).remove();
 			$( 'head' ).append( '<style id="woocommerce-colors-secondary">' + css + '</style>' );
