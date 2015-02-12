@@ -1,9 +1,9 @@
 === WooCommerce Colors ===
 Contributors: woothemes, claudiosanches
 Tags: woocommerce, shortcodes
-Requires at least: 3.9
+Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Starting WooCommerce 2.3 the Frontend styles options will no longer be part of W
 
 = Requeriments =
 
-* WordPress 3.9 or later.
+* WordPress 4.0 or later.
 * WooCommerce 2.3 or later.
 
 = Contribute =
@@ -45,11 +45,21 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 * Works just adding new colors options on the Customize menu.
 
+= Where is the Cutomize menu? =
+
+You can find the customizer menu within your WordPress admin in Appearance session.
+
+We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
+
 == Screenshots ==
 
 1. WooCommerce Colors on Customizer menu.
 
 == Changelog ==
+
+= 1.0.2 - 2015/02/12 =
+
+* Added descriptions in the customizer options (see the screenshot).
 
 = 1.0.1 - 2015/01/14 =
 
@@ -61,6 +71,6 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.2 =
 
-* Initial version.
+* Added descriptions in the customizer options (see the screenshot).
