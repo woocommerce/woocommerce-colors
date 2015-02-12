@@ -51,7 +51,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_primary', array(
-			'label'    => __( 'Primary Color', 'woocommerce-colors' ),
+			'label'    => sprintf( __( 'Primary Color %s', 'woocommerce-colors' ), '<small>(' . __( 'action buttons/price slider/layered nav UI', 'woocommerce-colors' ) . ')</small>' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[primary]',
 			'priority' => 1
@@ -66,7 +66,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_secondary', array(
-			'label'    => __( 'Secondary Color', 'woocommerce-colors' ),
+			'label'    => sprintf( __( 'Secondary Color %s', 'woocommerce-colors' ), '<small>(' . __( 'buttons and tabs', 'woocommerce-colors' ) . ')</small>' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[secondary]',
 			'priority' => 1
@@ -81,7 +81,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_highlight', array(
-			'label'    => __( 'Highlight Color', 'woocommerce-colors' ),
+			'label'    => sprintf( __( 'Highlight Color %s', 'woocommerce-colors' ), '<small>(' . __( 'price labels and sale flashes', 'woocommerce-colors' ) . ')</small>' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[highlight]',
 			'priority' => 1
@@ -96,7 +96,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_contentbg', array(
-			'label'    => __( 'Content Background Color', 'woocommerce-colors' ),
+			'label'    => sprintf( __( 'Content Background Color %s', 'woocommerce-colors' ), '<small>(' . __( 'your themes page background - used for tab active states', 'woocommerce-colors' ) . ')</small>' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[contentbg]',
 			'priority' => 1
@@ -111,7 +111,7 @@ class WC_Colors_Customizer {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woocommerce_subtext', array(
-			'label'    => __( 'Subtext Color', 'woocommerce-colors' ),
+			'label'    => sprintf( __( 'Subtext Color %s', 'woocommerce-colors' ), '<small>(' . __( 'used for certain text and asides - breadcrumbs, small text etc', 'woocommerce-colors' ) . ')</small>' ),
 			'section'  => $this->section_slug,
 			'settings' => $this->section_slug . '[subtext]',
 			'priority' => 1
