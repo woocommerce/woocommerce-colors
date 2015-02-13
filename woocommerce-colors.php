@@ -148,6 +148,10 @@ class WC_Colors {
 
 			// Delete the old option.
 			delete_option( 'woocommerce_frontend_css_colors' );
+
+			// Remove the notice.
+			$notices = array_diff( get_option( 'woocommerce_admin_notices', array() ), array( 'frontend_colors' ) );
+			update_option( 'woocommerce_admin_notices', $notices );
 		}
 	}
 
@@ -164,6 +168,6 @@ class WC_Colors {
 // Plugin install.
 register_activation_hook( __FILE__, array( 'WC_Colors', 'install' ) );
 
-add_action( 'plugins_loaded', array( 'WC_Colors', 'get_instance' ), 0 );
+add_action( 'plugins_loaded', array( 'WC_Colors', 'get_instance' ) );
 
 endif;
