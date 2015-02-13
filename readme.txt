@@ -15,6 +15,10 @@ This plugin adds a new session called WooCommerce on the Customize menu, allowin
 
 Starting WooCommerce 2.3 the Frontend styles options will no longer be part of WooCommerce and will only be available by using this plugin.
 
+= WooCommerce Colors in action: =
+
+[youtube https://www.youtube.com/watch?v=Hvyy36FOiTA]
+
 = Requeriments =
 
 * WordPress 4.0 or later.
