@@ -3,7 +3,7 @@ Contributors: woothemes, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,10 @@ We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
 
 == Changelog ==
 
+= 1.0.3 - 2015/02/13 =
+
+* Fixed the WooCommerce notices when install the WooCommerce Colors.
+
 = 1.0.2 - 2015/02/12 =
 
 * Added descriptions in the customizer options (see the screenshot).
@@ -71,6 +75,6 @@ We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
 
 == Upgrade Notice ==
 
-= 1.0.2 =
+= 1.0.3 =
 
-* Added descriptions in the customizer options (see the screenshot).
+* Fixed the WooCommerce notices when install the WooCommerce Colors.
