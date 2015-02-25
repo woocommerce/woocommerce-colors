@@ -11,7 +11,7 @@ Allows you to change the buttons color and other elements of WooCommerce. Beauti
 
 == Description ==
 
-This plugin adds a new session called WooCommerce on the Customize menu, allowing you to easily change color of buttons and [WooCommerce](http://wordpress.org/plugins/woocommerce/) elements.
+This plugin adds a new section called WooCommerce on the Customize menu, allowing you to easily change color of buttons and [WooCommerce](http://wordpress.org/plugins/woocommerce/) elements.
 
 Starting WooCommerce 2.3 the Frontend styles options will no longer be part of WooCommerce and will only be available by using this plugin.
 
@@ -51,7 +51,7 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 = Where is the Cutomize menu? =
 
-You can find the customizer menu within your WordPress admin in Appearance session.
+You can find the customizer menu within your WordPress admin in Appearance section.
 
 We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
 
