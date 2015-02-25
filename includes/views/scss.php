@@ -24,62 +24,62 @@ p.demo_store {
 	.woocommerce-message,
 	.woocommerce-error,
 	.woocommerce-info {
-		background-color: lighten($secondary,5%) !important;
-		color: $secondarytext !important;
+		background-color: lighten($secondary,5%);
+		color: $secondarytext;
 	}
 
 	small.note {
-		color: $subtext !important;
+		color: $subtext;
 	}
 
 	.woocommerce-breadcrumb {
-		color: $subtext !important;
+		color: $subtext;
 
 		a {
-			color: $subtext !important;
+			color: $subtext;
 		}
 	}
 
 	div.product {
 		span.price,
 		p.price {
-			color: $highlight !important;
+			color: $highlight;
 		}
 
 		.stock {
-			color: $highlight !important;
+			color: $highlight;
 		}
 
 		.woocommerce-tabs {
 			ul.tabs {
 				li {
-					border: 1px solid darken( $secondary, 10% ) !important;
-					background-color: $secondary !important;
+					border: 1px solid darken( $secondary, 10% );
+					background-color: $secondary;
 
 					a {
-						color: $secondarytext !important;
+						color: $secondarytext;
 
 						&:hover {
-							color: lighten( $secondarytext, 10% ) !important;
+							color: lighten( $secondarytext, 10% );
 						}
 					}
 
 					&.active {
-						background: $contentbg !important;
-						border-bottom-color: $contentbg !important;
+						background: $contentbg;
+						border-bottom-color: $contentbg;
 
 						&:before {
-							box-shadow: 2px 2px 0 $contentbg !important;
+							box-shadow: 2px 2px 0 $contentbg;
 						}
 
 						&:after {
-							box-shadow: -2px 2px 0 $contentbg !important;
+							box-shadow: -2px 2px 0 $contentbg;
 						}
 					}
 
 					&:before,
 					&:after {
-						border: 1px solid darken( $secondary, 10% ) !important;
+						border: 1px solid darken( $secondary, 10% );
 						position: absolute;
 						bottom: -1px;
 						width: 5px;
@@ -93,7 +93,7 @@ p.demo_store {
 						-moz-border-bottom-right-radius: 4px;
 						border-bottom-right-radius: 4px;
 						border-width: 0 1px 1px 0;
-						box-shadow: 2px 2px 0 $secondary !important;
+						box-shadow: 2px 2px 0 $secondary;
 					}
 
 					&:after {
@@ -102,29 +102,29 @@ p.demo_store {
 						-moz-border-bottom-left-radius: 4px;
 						border-bottom-left-radius: 4px;
 						border-width: 0 0 1px 1px;
-						box-shadow: -2px 2px 0 $secondary !important;
+						box-shadow: -2px 2px 0 $secondary;
 					}
 				}
 
 				&:before {
-					border-bottom: 1px solid darken( $secondary, 10% ) !important;
+					border-bottom: 1px solid darken( $secondary, 10% );
 				}
 			}
 		}
 	}
 
 	span.onsale {
-		background-color: $highlight !important;
-		color: $highlightext !important;
+		background-color: $highlight;
+		color: $highlightext;
 	}
 
 	ul.products {
 		li.product {
 			.price {
-				color: $highlight !important;
+				color: $highlight;
 
 				.from {
-					color: rgba(desaturate($highlight, 75%), 0.5) !important;
+					color: rgba(desaturate($highlight, 75%), 0.5);
 				}
 			}
 		}
@@ -132,16 +132,16 @@ p.demo_store {
 
 	nav.woocommerce-pagination {
 		ul {
-			border: 1px solid darken( $secondary, 10% ) !important;
+			border: 1px solid darken( $secondary, 10% );
 
 			li {
-				border-right: 1px solid darken( $secondary, 10% ) !important;
+				border-right: 1px solid darken( $secondary, 10% );
 
 				span.current,
 				a:hover,
 				a:focus {
-					background: $secondary !important;
-					color: darken( $secondary, 40% ) !important;
+					background: $secondary;
+					color: darken( $secondary, 40% );
 				}
 			}
 		}
@@ -151,21 +151,21 @@ p.demo_store {
 	button.button,
 	input.button,
 	#respond input#submit {
-		color: $secondarytext !important;
-		background-color: $secondary !important;
+		color: $secondarytext;
+		background-color: $secondary;
 
 		&:hover {
-			background-color: $secondary - #111 !important;
-			color: $secondarytext !important;
+			background-color: $secondary - #111;
+			color: $secondarytext;
 		}
 
 		&.alt {
-			background-color: $primary !important;
-			color: $primarytext !important;
+			background-color: $primary;
+			color: $primarytext;
 
 			&:hover {
-				background-color: $primary - #111 !important;
-				color: $primarytext !important;
+				background-color: $primary - #111;
+				color: $primarytext;
 			}
 
 			&.disabled,
@@ -174,8 +174,8 @@ p.demo_store {
 			&.disabled:hover,
 			&:disabled:hover,
 			&:disabled[disabled]:hover {
-				background-color: $primary !important;
-				color: $primarytext !important;
+				background-color: $primary;
+				color: $primarytext;
 			}
 		}
 
@@ -183,17 +183,17 @@ p.demo_store {
 		&.disabled,
 		&:disabled[disabled] {
 			&:hover {
-				background-color: $secondary !important;
+				background-color: $secondary;
 			}
 		}
 	}
 
 	#reviews {
 		h2 small {
-			color: $subtext !important;
+			color: $subtext;
 
 			a {
-				color: $subtext !important;
+				color: $subtext;
 			}
 		}
 
@@ -201,21 +201,21 @@ p.demo_store {
 			ol.commentlist {
 				li {
 					.meta {
-						color: $subtext !important;
+						color: $subtext;
 					}
 
 					img.avatar {
-						background: $secondary !important;
-						border: 1px solid darken( $secondary, 3% ) !important;
+						background: $secondary;
+						border: 1px solid darken( $secondary, 3% );
 					}
 
 					.comment-text {
-						border: 1px solid darken( $secondary, 3% ) !important;
+						border: 1px solid darken( $secondary, 3% );
 					}
 				}
 
 				#respond {
-					border: 1px solid darken( $secondary, 3% ) !important;
+					border: 1px solid darken( $secondary, 3% );
 				}
 			}
 		}
@@ -223,40 +223,40 @@ p.demo_store {
 
 	.star-rating {
 		&:before {
-			color: darken( $secondary, 10% ) !important;
+			color: darken( $secondary, 10% );
 		}
 	}
 
 	&.widget_shopping_cart,
 	.widget_shopping_cart {
 		.total {
-			border-top: 3px double $secondary !important;
+			border-top: 3px double $secondary;
 		}
 	}
 
 	form.login,
 	form.checkout_coupon,
 	form.register {
-		border: 1px solid darken( $secondary, 10% ) !important;
+		border: 1px solid darken( $secondary, 10% );
 	}
 
 	.order_details {
 		li {
-			border-right: 1px dashed darken( $secondary, 10% ) !important;
+			border-right: 1px dashed darken( $secondary, 10% );
 		}
 	}
 
 	.widget_price_filter {
 		.ui-slider .ui-slider-handle {
-			background-color: $primary !important;
+			background-color: $primary;
 		}
 
 		.ui-slider .ui-slider-range {
-			background-color: $primary !important;
+			background-color: $primary;
 		}
 
 		.price_slider_wrapper .ui-widget-content {
-			background-color: $primary - #444 !important;
+			background-color: $primary - #444;
 		}
 	}
 }
@@ -266,7 +266,7 @@ p.demo_store {
 		td.actions {
 			.coupon {
 				.input-text {
-					border: 1px solid darken( $secondary, 10% ) !important;
+					border: 1px solid darken( $secondary, 10% );
 				}
 			}
 		}
@@ -276,23 +276,23 @@ p.demo_store {
 		.cart_totals {
 			p {
 				small {
-					color: $subtext !important;
+					color: $subtext;
 				}
 			}
 
 			table {
 				small {
-					color: $subtext !important;
+					color: $subtext;
 				}
 			}
 
 			.discount td {
-				color: $highlight !important;
+				color: $highlight;
 			}
 
 			tr td,
 			tr th {
-				border-top: 1px solid $secondary !important;
+				border-top: 1px solid $secondary;
 			}
 		}
 	}
@@ -301,46 +301,46 @@ p.demo_store {
 .woocommerce-checkout {
 	.checkout {
 		.create-account small {
-			color: $subtext !important;
+			color: $subtext;
 		}
 	}
 
 	#payment {
-		background: $secondary !important;
+		background: $secondary;
 
 		ul.payment_methods {
-			border-bottom: 1px solid darken( $secondary, 10% ) !important;
+			border-bottom: 1px solid darken( $secondary, 10% );
 		}
 
 		div.payment_box {
-			background-color: darken( $secondary, 5% ) !important;
-			color: $secondarytext !important;
+			background-color: darken( $secondary, 5% );
+			color: $secondarytext;
 
 			input.input-text, textarea {
-				border-color: darken( $secondary, 15% ) !important;
-				border-top-color: darken( $secondary, 20% ) !important;
+				border-color: darken( $secondary, 15% );
+				border-top-color: darken( $secondary, 20% );
 			}
 
 			::-webkit-input-placeholder {
-				color: darken( $secondary, 20% ) !important;
+				color: darken( $secondary, 20% );
 			}
 
 			:-moz-placeholder {
-				color: darken( $secondary, 20% ) !important;
+				color: darken( $secondary, 20% );
 			}
 
 			:-ms-input-placeholder {
-				color: darken( $secondary, 20% ) !important;
+				color: darken( $secondary, 20% );
 			}
 
 			span.help {
-				color: $subtext !important;
+				color: $subtext;
 			}
 
 			&:after {
 				content: "";
 				display: block;
-				border: 8px solid darken( $secondary, 5% ) !important;
+				border: 8px solid darken( $secondary, 5% );
 				border-right-color: transparent;
 				border-left-color: transparent;
 				border-top-color: transparent;
