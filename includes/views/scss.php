@@ -21,12 +21,12 @@ p.demo_store {
 
 .woocommerce {
 
-	.woocommerce-message,
-	.woocommerce-error,
-	.woocommerce-info {
-		background-color: lighten($secondary,5%);
-		color: $secondarytext;
-	}
+	// .woocommerce-message,
+	// .woocommerce-error,
+	// .woocommerce-info {
+	// 	background-color: lighten($secondary,5%);
+	// 	color: $secondarytext;
+	// }
 
 	small.note {
 		color: $subtext;
