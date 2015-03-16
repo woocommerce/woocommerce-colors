@@ -2,8 +2,8 @@
 Contributors: woothemes, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 4.0
-Tested up to: 4.1
-Stable tag: 1.0.5
+Tested up to: 4.1.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,11 @@ We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
 
 == Changelog ==
 
+= 1.0.6 - 2015/03/16 =
+
+* Prevented to load the `scssc` twice.
+* Removed the product tabs styles.
+
 = 1.0.5 - 2015/02/19 =
 
 * Removed `!important`, somethings need to be overwrite by themes.
@@ -88,7 +93,7 @@ We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
 
 == Upgrade Notice ==
 
-= 1.0.5 =
+= 1.0.6 =
 
-* Removed `!important`, somethings need to be overwrite by themes.
-* Fixed the product tabs.
+* Prevented to load the `scssc` twice.
+* Removed the product tabs styles.
