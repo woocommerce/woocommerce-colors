@@ -134,7 +134,9 @@ class WC_Colors_Customizer {
 	 * @return string
 	 */
 	protected function compile_scss() {
-		include_once 'libs/class-scss.php';
+		if ( ! class_exists( 'scssc' ) && ! class_exists( 'scss_formatter_nested' ) ) {
+			include_once 'libs/class-scss.php';
+		}
 
 		// Get options
 		$colors = WC_Colors::get_options( get_option( 'woocommerce_colors' ) );
