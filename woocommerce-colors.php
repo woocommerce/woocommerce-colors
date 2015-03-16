@@ -134,7 +134,9 @@ class WC_Colors {
 			update_option( 'woocommerce_colors', $colors );
 
 			// Compile the css.
-			include_once 'includes/libs/class-scss.php';
+			if ( ! class_exists( 'scssc' ) && ! class_exists( 'scss_formatter_nested' ) ) {
+				include_once 'includes/libs/class-scss.php';
+			}
 
 			ob_start();
 			include 'includes/views/scss.php';
