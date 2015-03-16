@@ -50,67 +50,67 @@ p.demo_store {
 			color: $highlight;
 		}
 
-		.woocommerce-tabs {
-			ul.tabs {
-				li {
-					border: 1px solid darken( $secondary, 10% );
-					background-color: $secondary;
+		// .woocommerce-tabs {
+		// 	ul.tabs {
+		// 		li {
+		// 			border: 1px solid darken( $secondary, 10% );
+		// 			background-color: $secondary;
 
-					a {
-						color: $secondarytext;
+		// 			a {
+		// 				color: $secondarytext;
 
-						&:hover {
-							color: lighten( $secondarytext, 10% );
-						}
-					}
+		// 				&:hover {
+		// 					color: lighten( $secondarytext, 10% );
+		// 				}
+		// 			}
 
-					&.active {
-						background: $contentbg;
-						border-bottom-color: $contentbg;
+		// 			&.active {
+		// 				background: $contentbg;
+		// 				border-bottom-color: $contentbg;
 
-						&:before {
-							box-shadow: 2px 2px 0 $contentbg;
-						}
+		// 				&:before {
+		// 					box-shadow: 2px 2px 0 $contentbg;
+		// 				}
 
-						&:after {
-							box-shadow: -2px 2px 0 $contentbg;
-						}
-					}
+		// 				&:after {
+		// 					box-shadow: -2px 2px 0 $contentbg;
+		// 				}
+		// 			}
 
-					&:before,
-					&:after {
-						border: 1px solid darken( $secondary, 10% );
-						position: absolute;
-						bottom: -1px;
-						width: 5px;
-						height: 5px;
-						content: " ";
-					}
+		// 			&:before,
+		// 			&:after {
+		// 				border: 1px solid darken( $secondary, 10% );
+		// 				position: absolute;
+		// 				bottom: -1px;
+		// 				width: 5px;
+		// 				height: 5px;
+		// 				content: " ";
+		// 			}
 
-					&:before {
-						left: -6px;
-						-webkit-border-bottom-right-radius: 4px;
-						-moz-border-bottom-right-radius: 4px;
-						border-bottom-right-radius: 4px;
-						border-width: 0 1px 1px 0;
-						box-shadow: 2px 2px 0 $secondary;
-					}
+		// 			&:before {
+		// 				left: -6px;
+		// 				-webkit-border-bottom-right-radius: 4px;
+		// 				-moz-border-bottom-right-radius: 4px;
+		// 				border-bottom-right-radius: 4px;
+		// 				border-width: 0 1px 1px 0;
+		// 				box-shadow: 2px 2px 0 $secondary;
+		// 			}
 
-					&:after {
-						right: -6px;
-						-webkit-border-bottom-left-radius: 4px;
-						-moz-border-bottom-left-radius: 4px;
-						border-bottom-left-radius: 4px;
-						border-width: 0 0 1px 1px;
-						box-shadow: -2px 2px 0 $secondary;
-					}
-				}
+		// 			&:after {
+		// 				right: -6px;
+		// 				-webkit-border-bottom-left-radius: 4px;
+		// 				-moz-border-bottom-left-radius: 4px;
+		// 				border-bottom-left-radius: 4px;
+		// 				border-width: 0 0 1px 1px;
+		// 				box-shadow: -2px 2px 0 $secondary;
+		// 			}
+		// 		}
 
-				&:before {
-					border-bottom: 1px solid darken( $secondary, 10% );
-				}
-			}
-		}
+		// 		&:before {
+		// 			border-bottom: 1px solid darken( $secondary, 10% );
+		// 		}
+		// 	}
+		// }
 	}
 
 	span.onsale {
