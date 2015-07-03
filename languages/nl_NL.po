@@ -1,0 +1,91 @@
+# Copyright (C) 2015 WooThemes
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Colors 1.0.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/woocommerce-"
+"frontend-styles/\n"
+"POT-Creation-Date: 2015-07-03 11:06+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-07-03 11:10+0200\n"
+"Last-Translator: Carsten <carsten@presis.nl>\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"X-Generator: Poedit 1.8.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl_NL\n"
+
+#: includes/class-wc-colors-customizer.php:40
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#. Description of the plugin/theme
+msgid "WooCommerce Colors."
+msgstr "WooCommerce Kleuren."
+
+#: includes/class-wc-colors-customizer.php:54
+msgid "Primary Color %s"
+msgstr "Primaire kleur %s"
+
+#: includes/class-wc-colors-customizer.php:54
+msgid "action buttons/price slider/layered nav UI"
+msgstr "actie knoppen / prijs slider / gelaagde navigatie interface"
+
+#: includes/class-wc-colors-customizer.php:69
+msgid "Secondary Color %s"
+msgstr "Secondaire kleur %s"
+
+#: includes/class-wc-colors-customizer.php:69
+msgid "buttons and tabs"
+msgstr "knoppen en tabbladen"
+
+#: includes/class-wc-colors-customizer.php:84
+msgid "Highlight Color %s"
+msgstr "Uitgelichte kleur %s"
+
+#: includes/class-wc-colors-customizer.php:84
+msgid "price labels and sale flashes"
+msgstr "prijslabels en uitverkoop meldingen"
+
+#: includes/class-wc-colors-customizer.php:99
+msgid "Content Background Color %s"
+msgstr "Inhoud achtergrondkleur %s"
+
+#: includes/class-wc-colors-customizer.php:99
+msgid "your themes page background - used for tab active states"
+msgstr "kleur van de pagina achtergrond - gebruikt voor status actief tabblad"
+
+#: includes/class-wc-colors-customizer.php:114
+msgid "Subtext Color %s"
+msgstr "Subtekst kleur %s"
+
+#: includes/class-wc-colors-customizer.php:114
+msgid "used for certain text and asides - breadcrumbs, small text etc"
+msgstr "gebruikt voor sommige teksten - broodkruimelpad, kleine teksten, etc."
+
+#: woocommerce-colors.php:164
+msgid "WooCommerce Colors depends on the last version of %s or later to work!"
+msgstr ""
+"WooCommerce Colors heeft minimaal de laatste versie van %s nodig om te "
+"werken!"
+
+#: woocommerce-colors.php:164
+msgid "WooCommerce 2.3"
+msgstr "WooCommerce 2.3"
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Colors"
+msgstr "WooCommerce Colors"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/woocommerce-colors/"
+msgstr "http://wordpress.org/plugins/woocommerce-colors/"
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr "WooThemes"
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com"
+msgstr "http://woothemes.com"
