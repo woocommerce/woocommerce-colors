@@ -4,8 +4,8 @@
  * Plugin URI: http://wordpress.org/plugins/woocommerce-colors/
  * Description: WooCommerce Colors.
  * Author: WooThemes
- * Author URI: http://woothemes.com
- * Version: 1.0.6
+ * Author URI: https://woocommerce.com
+ * Version: 1.0.7
  * License: GPLv2 or later
  * Text Domain: woocommerce-colors
  * Domain Path: languages/
@@ -27,7 +27,7 @@ class WC_Colors {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.0.6';
+	const VERSION = '1.0.7';
 
 	/**
 	 * Instance of this class.

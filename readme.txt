@@ -2,8 +2,8 @@
 Contributors: woothemes, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 4.0
-Tested up to: 4.1.1
-Stable tag: 1.0.6
+Tested up to: 4.9
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,8 +42,8 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 = What is needed to use this plugin? =
 
-* WordPress 3.9 or later.
-* WooCommerce 2.2 or later.
+* WordPress 4.0 or later.
+* WooCommerce 2.3 or later.
 
 = How this plugin works? =
 
@@ -53,13 +53,15 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 You can find the customizer menu within your WordPress admin in Appearance section.
 
-We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
-
 == Screenshots ==
 
 1. WooCommerce Colors on Customizer menu.
 
 == Changelog ==
+
+= 1.0.7 - 2017/10/18 =
+
+* Updated version, tested with WordPress 4.9 and WooCommerce 3.2.
 
 = 1.0.6 - 2015/03/16 =
 
@@ -93,7 +95,7 @@ We recommend you use WordPress 4.0 or 4.1 for this plugin work properly.
 
 == Upgrade Notice ==
 
-= 1.0.6 =
+= 1.0.7 =
 
-* Prevented to load the `scssc` twice.
-* Removed the product tabs styles.
+ Updated version, tested with WordPress 4.9 and WooCommerce 3.2.
+
