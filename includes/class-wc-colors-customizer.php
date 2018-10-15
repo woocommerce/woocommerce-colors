@@ -37,10 +37,8 @@ class WC_Colors_Customizer {
 	public function register_settings( $wp_customize ) {
 
 		$wp_customize->add_section( $this->section_slug, array(
-			'title'       => __( 'WooCommerce', 'woocommerce-colors' ),
 			'title'       => __( 'Colors', 'woocommerce-colors' ),
 			'priority'    => 60,
-			'description' => __( 'WooCommerce Colors.', 'woocommerce-colors' )
 			'description' => __( 'WooCommerce Colors.', 'woocommerce-colors' ),
 			'panel'       => 'woocommerce',
 		) );
